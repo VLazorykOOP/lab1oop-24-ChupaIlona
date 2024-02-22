@@ -248,8 +248,9 @@ void ArrayLocal()
 
 int main()
 {
+    
     const int N = 11;
-    int A[N] = {7,-2,-9,1,5,-6,9,3,4,-10};
+    int A[N] = { 7,-2,-9,1,5,-6,9,3,4,-10 };
     int B[N];
     int i;
     cout << "Start array: ";
@@ -272,7 +273,20 @@ int main()
     }
     cout << endl;
 
-    
+
+
+
+    int Arr[N] = { 3,10,25,30,5,10,7,6 };
+    int T[N];
+    int firstMultipleOfTwoIndex = -1;
+
+    for (i = 0; i < N; ++i) {
+        if (Arr[i] % 2 == 0) {
+            firstMultipleOfTwoIndex = i;
+            break;
+        }
+     }
+
         
 
        
