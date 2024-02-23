@@ -278,14 +278,28 @@ int main()
 
     int Arr[N] = { 3,10,25,30,5,10,7,6 };
     int T[N];
-    int firstMultipleOfTwoIndex = -1;
+    int Multipleoftwo = -1;
+    int minPositiveRight = numeric_limits<int>::max();
 
     for (i = 0; i < N; ++i) {
         if (Arr[i] % 2 == 0) {
-            firstMultipleOfTwoIndex = i;
+             Multipleoftwo = i;
             break;
         }
      }
+    for (int i = Multipleoftwo + 1; i < N; ++i) {
+        if (Arr[i] > 0 && Arr[i] < minPositiveRight) {
+            minPositiveRight = Arr[i];
+        }
+    }
+
+    if (minPositiveRight != numeric_limits<int>::max()) {
+        cout << "Minimum " << minPositiveRight << endl;
+    }
+    else {
+        cout << "Answer is unknown" << endl;
+    }
+
 
         
 
